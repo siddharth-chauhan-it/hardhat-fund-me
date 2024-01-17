@@ -10,6 +10,10 @@ The project covers the following:
 - Smart Contracts
 - Solidity Language
 - ABI and bytecode
+- Storage in Solidity
+- Gas Optimizations
+- Running Scripts on a Local Node
+- Adding Scripts to package.json
 - Natspec and styling guide for solidity code
 - Hardhat for testing and deployment of the contract
 - Using the plugin `hardhat-deploy-ethers`
