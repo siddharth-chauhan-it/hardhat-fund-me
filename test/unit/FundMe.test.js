@@ -15,7 +15,7 @@ const { developmentChains } = require("../../helper-hardhat-config");
         fundMe = await ethers.getContract("FundMe", deployer);
       });
 
-      describe("constructor", async function () {
+      describe("constructor", function () {
         it("Sets the aggregator address correctly", async function () {
           const response = await fundMe.getPriceFeed();
           // console.log(`response: ${response}`);
@@ -27,7 +27,7 @@ const { developmentChains } = require("../../helper-hardhat-config");
         });
       });
 
-      describe("fund", async function () {
+      describe("fund", function () {
         it("Fails if you don't send enough ETH", async function () {
           await expect(fundMe.fund()).to.revertedWith("Didn't send enough ETH");
         });
@@ -45,7 +45,7 @@ const { developmentChains } = require("../../helper-hardhat-config");
         });
       });
 
-      describe("withdraw", async function () {
+      describe("withdraw", function () {
         beforeEach(async function () {
           await fundMe.fund({ value: sendValue });
         });
